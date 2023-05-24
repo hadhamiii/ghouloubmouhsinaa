@@ -5,7 +5,6 @@ import 'package:ghouloubmouhsina/binding.dart';
 import 'package:ghouloubmouhsina/core/constant/color.dart';
 import 'package:ghouloubmouhsina/core/services/services.dart';
 import 'package:ghouloubmouhsina/routes.dart';
-import 'package:ghouloubmouhsina/view/screen/OnBoarding.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -42,11 +41,11 @@ class MyApp extends StatelessWidget {
                 TextStyle(height: 2, color: AppColor.grey, fontSize: 14)),
         primarySwatch: Colors.blue,
       ),
-      home:
-          //  Test(),
-          const OnBoarding(),
+
+      //  Test(),
+      //  const OnBoarding(),
       initialBinding: MyBinding(),
-      routes: routes,
+      getPages: routes,
     );
   }
 }

@@ -22,16 +22,16 @@ class ResetPassword extends StatelessWidget {
         centerTitle: true,
         backgroundColor: AppColor.backgroundcolor,
         elevation: 0.0,
-        title: Text('ResetPassword',
+        title: Text('إعادة تعيين كلمة المرور',
             style: Theme.of(context)
                 .textTheme
                 .headline1!
                 .copyWith(color: AppColor.grey)),
       ),
-      body: Form(
-        key: controller.formstate,
-        child: Container(
-          padding: const EdgeInsets.symmetric(vertical: 15, horizontal: 30),
+      body: Container(
+        padding: const EdgeInsets.symmetric(vertical: 15, horizontal: 30),
+        child: Form(
+          key: controller.formstate,
           child: ListView(children: [
             const SizedBox(height: 20),
             const CustomTextTitleAuth(text: "كلمة مرور جديدة"),

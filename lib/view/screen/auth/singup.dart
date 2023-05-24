@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:ghouloubmouhsina/controller/auth/singupcontroller.dart';
 import 'package:ghouloubmouhsina/core/constant/color.dart';
+import 'package:ghouloubmouhsina/core/functions/alertexitapp.dart';
 import 'package:ghouloubmouhsina/core/functions/valideinput.dart';
 import 'package:ghouloubmouhsina/view/widget/auth/customtextform.dart';
 import 'package:ghouloubmouhsina/view/widget/auth/customtexttitleauth.dart';
@@ -16,6 +17,7 @@ class SignUp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    SignUpControllerImp controller = Get.put(SignUpControllerImp());
     return Scaffold(
       appBar: AppBar(
         centerTitle: true,
@@ -27,8 +29,9 @@ class SignUp extends StatelessWidget {
                 .headline1!
                 .copyWith(color: AppColor.kPrimaryLightColor)),
       ),
-      body: GetBuilder<SignUpControllerImp>(
-        builder: (controller) => Container(
+      body: WillPopScope(
+        onWillPop: alertExitApp,
+        child: Container(
           padding: const EdgeInsets.symmetric(vertical: 15, horizontal: 30),
           child: Form(
             key: controller.formstate,
@@ -65,7 +68,7 @@ class SignUp extends StatelessWidget {
               CustomTextFormAuth(
                 isNumber: true,
                 valid: (val) {
-                  return validInput(val!, 6, 11, "phone");
+                  return validInput(val!, 5, 11, "phone");
                 },
                 mycontroller: controller.phone,
                 hinttext: "أدخل هاتفك",

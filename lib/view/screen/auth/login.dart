@@ -27,7 +27,7 @@ class Login extends StatelessWidget {
                   .textTheme
                   // ignore: deprecated_member_use
                   .headline1!
-                  .copyWith(color: AppColor.black)),
+                  .copyWith(color: AppColor.kPrimaryColor)),
         ),
         body: WillPopScope(
           onWillPop: alertExitApp,

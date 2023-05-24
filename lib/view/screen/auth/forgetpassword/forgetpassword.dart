@@ -28,10 +28,10 @@ class ForgetPassword extends StatelessWidget {
                 .headline1!
                 .copyWith(color: AppColor.grey)),
       ),
-      body: Form(
-        key: controller.formstate,
-        child: Container(
-          padding: const EdgeInsets.symmetric(vertical: 15, horizontal: 30),
+      body: Container(
+        padding: const EdgeInsets.symmetric(vertical: 15, horizontal: 30),
+        child: Form(
+          key: controller.formstate,
           child: ListView(children: [
             const SizedBox(height: 20),
             const CustomTextTitleAuth(text: "تحقق من رقم الهاتف"),
@@ -42,7 +42,7 @@ class ForgetPassword extends StatelessWidget {
             CustomTextFormAuth(
               isNumber: true,
               valid: (val) {
-                return validInput(val!, 7, 11, "phone");
+                return validInput(val!, 6, 11, "phone");
               },
               mycontroller: controller.phone,
               hinttext: "أدخل هاتفك",
