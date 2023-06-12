@@ -8,6 +8,7 @@ abstract class LoginController extends GetxController {
   login();
   goToSignUp();
   goToForgetPassword();
+  goToAceil();
 }
 
 class LoginControllerImp extends LoginController {
@@ -54,5 +55,10 @@ class LoginControllerImp extends LoginController {
   @override
   goToForgetPassword() {
     Get.toNamed(AppRoutes.forgetPassword);
+  }
+
+  @override
+  goToAceil() {
+    Get.offNamed(AppRoutes.accueil);
   }
 }

@@ -20,14 +20,14 @@ class Login extends StatelessWidget {
     return Scaffold(
         appBar: AppBar(
           centerTitle: true,
-          backgroundColor: AppColor.backgroundcolor,
+          backgroundColor: AppColor.kPrimaryColor,
           elevation: 0.0,
           title: Text('قم بتسجيل الدخول',
               style: Theme.of(context)
                   .textTheme
                   // ignore: deprecated_member_use
                   .headline1!
-                  .copyWith(color: AppColor.kPrimaryColor)),
+                  .copyWith(color: AppColor.backgroundcolor)),
         ),
         body: WillPopScope(
           onWillPop: alertExitApp,
@@ -85,7 +85,7 @@ class Login extends StatelessWidget {
                   CustomButtomAuth(
                       text: "قم بتسجيل الدخول ",
                       onPressed: () {
-                        controller.login();
+                        controller.goToAceil();
                       }),
                   const SizedBox(height: 20),
                   CustomTextSignUpOrSignIn(

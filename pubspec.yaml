@@ -77,6 +77,7 @@ dependencies:
   image_pickers: ^ 2.0.4+1
   flutter_svg: ^0.23.0+1
   flutter_otp_text_field: ^1.1.1
+  lottie: ^1.4.1
 
 dev_dependencies:
   flutter_test:
@@ -103,6 +104,7 @@ flutter:
   # To add assets to your application, add an assets section, like this:
   assets:
     - assets/images/
+    - assets/lottie/
   #   - images/a_dot_ham.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see
@@ -121,6 +123,14 @@ flutter:
       fonts:
         - asset: assets/fonts/Cairo/Cairo-Regular.ttf
         - asset: assets/fonts/Cairo/Cairo-Bold.ttf
+          weight: 700
+
+    - family: quran-surah-svg2-font
+      fonts:
+        - asset: assets\fonts\quran-surah-svg2-font\QuranSurah1-mLKO5.ttf
+        - asset: assets\fonts\quran-surah-svg2-font\QuranSurah01-w1yO6.ttf
+        - asset: assets\fonts\quran-surah-svg2-font\QuranSurah2-7Bov4.ttf
+        - asset: assets\fonts\quran-surah-svg2-font\QuranSurah02-d9lVZ.ttf
           weight: 700
 
     - family: PlayfairDisplay

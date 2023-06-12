@@ -20,13 +20,13 @@ class ResetPassword extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         centerTitle: true,
-        backgroundColor: AppColor.backgroundcolor,
+        backgroundColor: AppColor.kPrimaryColor,
         elevation: 0.0,
         title: Text('إعادة تعيين كلمة المرور',
             style: Theme.of(context)
                 .textTheme
                 .headline1!
-                .copyWith(color: AppColor.grey)),
+                .copyWith(color: AppColor.backgroundcolor)),
       ),
       body: Container(
         padding: const EdgeInsets.symmetric(vertical: 15, horizontal: 30),

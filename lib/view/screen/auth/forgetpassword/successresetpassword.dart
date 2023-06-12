@@ -1,4 +1,4 @@
-// ignore_for_file: unused_local_variable
+// ignore_for_file: unused_local_variable, deprecated_member_use
 
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -38,7 +38,7 @@ class SuccessResetPassword extends StatelessWidget {
                   .textTheme
                   .headline1!
                   .copyWith(fontSize: 30)),
-          Text(""),
+          const Text(""),
           const Spacer(),
           SizedBox(
             width: double.infinity,

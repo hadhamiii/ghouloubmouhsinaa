@@ -1,5 +1,8 @@
+// ignore_for_file: avoid_print
+
 import 'package:flutter/cupertino.dart';
 import 'package:get/get.dart';
+import 'package:ghouloubmouhsina/core/class/statusrequest.dart';
 import 'package:ghouloubmouhsina/core/constant/routes.dart';
 
 abstract class SignUpController extends GetxController {
@@ -13,11 +16,14 @@ class SignUpControllerImp extends SignUpController {
   late TextEditingController email;
   late TextEditingController phone;
   late TextEditingController password;
+  StatusRequest? statusRequest;
 
+  List data = [];
   @override
   signUp() {
     var formdata = formstate.currentState;
     if (formdata!.validate()) {
+      print("Valid");
       Get.offNamed(AppRoutes.verfiyCodeSignUp);
     } else {
       print("Not Valid");
