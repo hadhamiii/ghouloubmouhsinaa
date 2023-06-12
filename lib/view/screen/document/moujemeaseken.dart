@@ -57,6 +57,5 @@ class MoujemaeSekeni extends StatelessWidget {
         ),
       ),
     );
-    ;
   }
 }

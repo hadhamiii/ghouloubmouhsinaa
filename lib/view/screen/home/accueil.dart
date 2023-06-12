@@ -19,10 +19,6 @@ class Accueil extends StatelessWidget {
     HomeScreenControllerImp controller2 = Get.put(HomeScreenControllerImp());
 
     return Scaffold(
-      appBar: AppBar(
-        backgroundColor: AppColor.backgroundcolor,
-        title: Container(child: ),
-      ),
         body: GetBuilder<AccueilControllerImp>(
       builder: (controller) => Container(
           padding: const EdgeInsets.symmetric(horizontal: 15),
