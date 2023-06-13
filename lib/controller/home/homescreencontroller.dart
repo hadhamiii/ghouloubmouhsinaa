@@ -5,6 +5,7 @@ import 'package:get/get.dart';
 import 'package:ghouloubmouhsina/view/screen/document/document.dart';
 import 'package:ghouloubmouhsina/view/screen/document/items.dart';
 import 'package:ghouloubmouhsina/view/screen/home/accueil.dart';
+import 'package:ghouloubmouhsina/view/screen/profile.dart';
 
 abstract class HomeScreenController extends GetxController {
   changePage(int currentpage);
@@ -17,16 +18,13 @@ class HomeScreenControllerImp extends HomeScreenController {
     const Accueil(),
     const Document(),
     const Items(),
-    const Column(
-      mainAxisAlignment: MainAxisAlignment.center,
-      children: [Center(child: Text("Favorite"))],
-    )
+    const Profile(),
   ];
 
   List titlebottomappbar = [
     {"title": "الرئيسية", "icon": Icons.home},
     {"title": "الملفات", "icon": Icons.document_scanner_rounded},
-    {"title": "الحملة", "icon": Icons.campaign},
+    {"title": "صدقة جارية", "icon": Icons.campaign},
     {"title": "حسابي", "icon": Icons.person}
   ];
 

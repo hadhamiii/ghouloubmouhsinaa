@@ -14,7 +14,7 @@ class ListCategoriesItems extends GetView<ItemsControllerImp> {
       height: 50,
       child: ListView.separated(
         separatorBuilder: (context, index) => const SizedBox(width: 10),
-        itemCount: categorielist.length,
+        itemCount: Categorielist.length,
         scrollDirection: Axis.horizontal,
         itemBuilder: (context, index) {
           return Categories(i: index, categoriesModel: CategoriesModel());

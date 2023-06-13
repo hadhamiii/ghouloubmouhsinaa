@@ -1,3 +1,5 @@
+// ignore_for_file: camel_case_types
+
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:ghouloubmouhsina/controller/document/campagnecontroller.dart';

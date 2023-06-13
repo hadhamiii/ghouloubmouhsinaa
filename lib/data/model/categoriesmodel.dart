@@ -1,6 +1,8 @@
+import 'package:flutter/material.dart';
+
 class CategoriesModel {
   String? categoriesName;
-  String? categoriesImage;
+  Icon? categoriesImage;
 
   CategoriesModel({
     this.categoriesName,

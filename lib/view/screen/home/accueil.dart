@@ -6,6 +6,7 @@ import 'package:ghouloubmouhsina/core/constant/color.dart';
 import 'package:ghouloubmouhsina/view/widget/home/accueillistcategories.dart';
 import 'package:ghouloubmouhsina/view/widget/home/accueillistitems.dart';
 import 'package:ghouloubmouhsina/view/widget/home/customappbarhome.dart';
+import 'package:ghouloubmouhsina/view/widget/home/hadith.dart';
 import 'package:ghouloubmouhsina/view/widget/home/newczrd.dart';
 import 'package:ghouloubmouhsina/view/widget/home/postcard.dart';
 import 'package:ghouloubmouhsina/view/widget/home/qaurancard.dart';
@@ -60,6 +61,7 @@ class Accueil extends StatelessWidget {
                 height: 20,
               ),
               const PostCard(),
+              const Hadith(),
               const SizedBox(height: 20),
             ],
           )),
