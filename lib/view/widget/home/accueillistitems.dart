@@ -14,7 +14,7 @@ class ListItemsAccuiel extends GetView<AccueilControllerImp> {
     return SizedBox(
       height: 270,
       child: ListView.builder(
-          itemCount: categorielist.length,
+          itemCount: Categorielist.length,
           scrollDirection: Axis.horizontal,
           itemBuilder: (context, i) {
             return ItemsAccueil(itemsModel: ItemsModel());

@@ -1,17 +1,17 @@
-import 'package:ghouloubmouhsina/core/constant/imageasset.dart';
+import 'package:flutter/material.dart';
 import 'package:ghouloubmouhsina/data/model/categoriesmodel.dart';
 
-List<CategoriesModel> categorielist = [
+List<CategoriesModel> Categorielist = [
   CategoriesModel(
-    categoriesImage: ImageAsset.onBoardingImageUne,
+    categoriesImage: Icon(Icons.mosque_outlined),
     categoriesName: "ma3hed ",
   ),
   CategoriesModel(
-    categoriesImage: ImageAsset.onBoardingImageUne,
+    categoriesImage: Icon(Icons.house),
     categoriesName: "dar ",
   ),
   CategoriesModel(
-    categoriesImage: ImageAsset.onBoardingImageUne,
+    categoriesImage: Icon(Icons.local_hospital_outlined),
     categoriesName: "medrasse",
   )
 ];
