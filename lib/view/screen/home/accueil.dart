@@ -6,7 +6,7 @@ import 'package:ghouloubmouhsina/core/constant/color.dart';
 import 'package:ghouloubmouhsina/view/widget/home/accueillistcategories.dart';
 import 'package:ghouloubmouhsina/view/widget/home/accueillistitems.dart';
 import 'package:ghouloubmouhsina/view/widget/home/customappbarhome.dart';
-import 'package:ghouloubmouhsina/view/widget/home/customcardhome.dart';
+import 'package:ghouloubmouhsina/view/widget/home/newczrd.dart';
 import 'package:ghouloubmouhsina/view/widget/home/postcard.dart';
 import 'package:ghouloubmouhsina/view/widget/home/qaurancard.dart';
 
@@ -25,14 +25,11 @@ class Accueil extends StatelessWidget {
           child: ListView(
             children: [
               const CustomAppBarHome(),
-              const CustomCardHome(
-                Title: "بئر ارتوازي",
-                body: "الحملة الكبرى للسقاية",
-                button: "تبرع الآن",
-              ),
+              const newcard(),
               const SizedBox(
                 height: 10,
               ),
+              const Qauran(),
               Row(
                 children: [
                   InkWell(
@@ -57,7 +54,7 @@ class Accueil extends StatelessWidget {
                 ],
               ),
               const ListItemsAccuiel(),
-              const Qauran(),
+              const SizedBox(height: 20),
               const ListCategoriesAccueil(),
               const SizedBox(
                 height: 20,

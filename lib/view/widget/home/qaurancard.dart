@@ -18,7 +18,7 @@ class Qauran extends StatelessWidget {
             style: TextStyle(
                 fontSize: 22,
                 fontFamily: "QuranSurah1-mLKO5",
-                color: AppColor.kPrimaryColor),
+                color: AppColor.kPrimaryLightColor),
           ),
         )
       ],
