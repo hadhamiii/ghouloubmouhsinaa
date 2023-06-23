@@ -17,6 +17,11 @@ import 'package:ghouloubmouhsina/view/screen/document/items.dart';
 import 'package:ghouloubmouhsina/view/screen/document/lebeyk.dart';
 import 'package:ghouloubmouhsina/view/screen/document/moujemeaseken.dart';
 import 'package:ghouloubmouhsina/view/screen/home/accueil_screen.dart';
+import 'package:ghouloubmouhsina/view/screen/home/handbutton.dart';
+import 'package:ghouloubmouhsina/view/screen/setting/association.dart';
+import 'package:ghouloubmouhsina/view/screen/setting/compte.dart';
+import 'package:ghouloubmouhsina/view/screen/setting/contactez_nous.dart';
+import 'package:ghouloubmouhsina/view/screen/setting/localisation.dart';
 
 List<GetPage<dynamic>>? routes = [
   GetPage(
@@ -40,4 +45,9 @@ List<GetPage<dynamic>>? routes = [
   GetPage(name: AppRoutes.lebeyk, page: () => const Lebeyk()),
   GetPage(name: AppRoutes.darhayat, page: () => const DarHaayat()),
   GetPage(name: AppRoutes.moumaesekeni, page: () => const MoujemaeSekeni()),
+  GetPage(name: AppRoutes.handbutton, page: () => const HandButton()),
+  GetPage(name: AppRoutes.contactez_nous, page: () => const ContactezNous()),
+  GetPage(name: AppRoutes.association, page: () => const Association()),
+  GetPage(name: AppRoutes.compte, page: () => const Compte()),
+  GetPage(name: AppRoutes.localisation, page: () => const Localisation()),
 ];

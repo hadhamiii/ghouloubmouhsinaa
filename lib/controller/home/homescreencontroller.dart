@@ -2,13 +2,15 @@
 
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:ghouloubmouhsina/core/constant/routes.dart';
 import 'package:ghouloubmouhsina/view/screen/document/document.dart';
 import 'package:ghouloubmouhsina/view/screen/document/items.dart';
 import 'package:ghouloubmouhsina/view/screen/home/accueil.dart';
-import 'package:ghouloubmouhsina/view/screen/profile.dart';
+import 'package:ghouloubmouhsina/view/screen/setting/profile.dart';
 
 abstract class HomeScreenController extends GetxController {
   changePage(int currentpage);
+  goToHand();
 }
 
 class HomeScreenControllerImp extends HomeScreenController {
@@ -32,5 +34,10 @@ class HomeScreenControllerImp extends HomeScreenController {
   changePage(int i) {
     currentpage = i;
     update();
+  }
+
+  @override
+  goToHand() {
+    Get.toNamed(AppRoutes.handbutton);
   }
 }

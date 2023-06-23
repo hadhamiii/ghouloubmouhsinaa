@@ -40,24 +40,32 @@ class Profile extends StatelessWidget {
             child: Card(
               child: Column(mainAxisSize: MainAxisSize.min, children: [
                 ListTile(
-                  // onTap: () {},
-                  trailing: Switch(onChanged: (val) {}, value: true),
-                  title: const Text("تعطيل الإشعارات"),
+                  onTap: () {
+                    controller.goToCompte();
+                  },
+                  trailing: const Icon(Icons.edit_note_rounded),
+                  title: const Text("معلوماتي الشخصية"),
                 ),
                 ListTile(
-                  onTap: () {},
-                  trailing: const Icon(Icons.location_on_outlined),
-                  title: const Text("إمكانية الوصول"),
-                ),
-                ListTile(
-                  onTap: () {},
+                  onTap: () {
+                    controller.goToAssociation();
+                  },
                   trailing: const Icon(Icons.help_outline_rounded),
                   title: const Text("عن قلوب محسنة"),
                 ),
                 ListTile(
-                  onTap: () {},
+                  onTap: () {
+                    controller.goTocontact();
+                  },
                   trailing: const Icon(Icons.phone_callback_outlined),
                   title: const Text("تواصل معنا"),
+                ),
+                ListTile(
+                  onTap: () {
+                    controller.goToLocalisation();
+                  },
+                  trailing: const Icon(Icons.location_on_outlined),
+                  title: const Text("إمكانية الوصول"),
                 ),
                 ListTile(
                   onTap: () {

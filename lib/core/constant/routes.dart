@@ -17,4 +17,9 @@ class AppRoutes {
   static const String lebeyk = "/lebeyk";
   static const String darhayat = "/darhayat";
   static const String moumaesekeni = "/moujemeaseken";
+  static const String handbutton = "/handbutton";
+  static const String contactez_nous = "/contactez_nous";
+  static const String association = "/association";
+  static const String compte = "/compte";
+  static const String localisation = "/localisation";
 }

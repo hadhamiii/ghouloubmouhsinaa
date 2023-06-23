@@ -14,7 +14,9 @@ class HomeScreen extends StatelessWidget {
         builder: (controller) => Scaffold(
               floatingActionButton: FloatingActionButton(
                   backgroundColor: AppColor.kPrimaryColor,
-                  onPressed: () {},
+                  onPressed: () {
+                    controller.goToHand();
+                  },
                   child: const Icon(Icons.front_hand_rounded)),
               floatingActionButtonLocation:
                   FloatingActionButtonLocation.centerDocked,

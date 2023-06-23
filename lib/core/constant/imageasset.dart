@@ -14,4 +14,8 @@ class ImageAsset {
   static const String medrasse = "$rootImages/medrasse.jpeg";
   static const String maarad = "$rootImages/ma3rad.jpeg";
   static const String card = "$rootImages/card.jpeg";
+  static const String atar = "$rootImages/atar.jpeg";
+  static const String nouadhibou = "$rootImages/nouadhibou.jpeg";
+  static const String nouakchott = "$rootImages/nouakchott.jpeg";
+  static const String zoueiratt = "$rootImages/zoueiratt.jpeg";
 }

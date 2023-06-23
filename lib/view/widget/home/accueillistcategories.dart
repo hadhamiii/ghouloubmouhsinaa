@@ -4,13 +4,13 @@ import 'package:ghouloubmouhsina/controller/home/aceil_controller.dart';
 import 'package:ghouloubmouhsina/controller/home/homescreencontroller.dart';
 import 'package:ghouloubmouhsina/core/constant/color.dart';
 import 'package:ghouloubmouhsina/data/datasource/static/listcateg.dart';
-import 'package:ghouloubmouhsina/data/model/categoriesmodel.dart';
 
 class ListCategoriesAccueil extends GetView<AccueilControllerImp> {
   const ListCategoriesAccueil({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
+    HomeScreenControllerImp controller2 = Get.put(HomeScreenControllerImp());
     return SizedBox(
       height: 122,
       child: ListView.separated(
@@ -18,48 +18,32 @@ class ListCategoriesAccueil extends GetView<AccueilControllerImp> {
         itemCount: Categorielist.length,
         scrollDirection: Axis.horizontal,
         itemBuilder: (context, index) {
-          return Categories(i: index, categoriesModel: CategoriesModel());
+          return InkWell(
+            onTap: () {
+              controller2.changePage(2);
+            },
+            child: Container(
+              width: 122,
+              padding: const EdgeInsetsDirectional.symmetric(horizontal: 5),
+              decoration: BoxDecoration(
+                  color: const Color.fromARGB(255, 218, 248, 235),
+                  borderRadius: BorderRadius.circular(20)),
+              child: Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Categorielist[index].categoriesImage!,
+                    Text(
+                      Categorielist[index].categoriesName!,
+                      textAlign: TextAlign.center,
+                      style: const TextStyle(
+                          color: AppColor.black,
+                          fontWeight: FontWeight.bold,
+                          fontSize: 17),
+                    )
+                  ]),
+            ),
+          );
         },
-      ),
-    );
-  }
-}
-
-class Categories extends GetView<AccueilControllerImp> {
-  final CategoriesModel categoriesModel;
-  final int? i;
-  const Categories({this.i, Key? key, required this.categoriesModel})
-      : super(key: key);
-  @override
-  Widget build(BuildContext context) {
-    HomeScreenControllerImp controller2 = Get.put(HomeScreenControllerImp());
-    return InkWell(
-      onTap: () {
-        controller2.changePage(2);
-      },
-      child: Container(
-        width: 122,
-        padding: const EdgeInsetsDirectional.symmetric(horizontal: 5),
-        decoration: BoxDecoration(
-            color: const Color.fromARGB(255, 218, 248, 235),
-            borderRadius: BorderRadius.circular(20)),
-        child: const Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              Icon(
-                Icons.mosque_outlined,
-                color: AppColor.kPrimaryLightColor,
-                size: 30,
-              ),
-              Text(
-                "الصدقات الجارية",
-                textAlign: TextAlign.center,
-                style: TextStyle(
-                    color: AppColor.black,
-                    fontWeight: FontWeight.bold,
-                    fontSize: 17),
-              )
-            ]),
       ),
     );
   }

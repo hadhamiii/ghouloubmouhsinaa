@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:ghouloubmouhsina/controller/home/aceil_controller.dart';
-import 'package:ghouloubmouhsina/core/constant/color.dart';
 import 'package:ghouloubmouhsina/view/widget/home/logoappbarhome.dart';
 
 class CustomAppBarHome extends GetView<AccueilControllerImp> {
@@ -18,14 +17,6 @@ class CustomAppBarHome extends GetView<AccueilControllerImp> {
             width: 50,
             padding: const EdgeInsets.only(right: 0),
             height: 50,
-            child: IconButton(
-              icon: const Icon(
-                Icons.favorite,
-                size: 25,
-              ),
-              color: AppColor.kPrimaryColor,
-              onPressed: () {},
-            ),
           ),
           const Spacer(
             flex: 2,

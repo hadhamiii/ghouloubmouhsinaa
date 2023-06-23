@@ -1,17 +1,32 @@
+// ignore_for_file: non_constant_identifier_names
+
 import 'package:flutter/material.dart';
+import 'package:ghouloubmouhsina/core/constant/color.dart';
 import 'package:ghouloubmouhsina/data/model/categoriesmodel.dart';
 
 List<CategoriesModel> Categorielist = [
   CategoriesModel(
-    categoriesImage: Icon(Icons.mosque_outlined),
-    categoriesName: "ma3hed ",
+    categoriesImage: const Icon(
+      Icons.mosque_outlined,
+      color: AppColor.kPrimaryColor,
+      size: 30,
+    ),
+    categoriesName: "المعهد",
   ),
   CategoriesModel(
-    categoriesImage: Icon(Icons.house),
-    categoriesName: "dar ",
+    categoriesImage: const Icon(
+      Icons.house,
+      color: AppColor.kPrimaryColor,
+      size: 30,
+    ),
+    categoriesName: "البيت",
   ),
   CategoriesModel(
-    categoriesImage: Icon(Icons.local_hospital_outlined),
-    categoriesName: "medrasse",
+    categoriesImage: const Icon(
+      Icons.local_hospital_outlined,
+      color: AppColor.kPrimaryColor,
+      size: 30,
+    ),
+    categoriesName: "المستشفى",
   )
 ];
