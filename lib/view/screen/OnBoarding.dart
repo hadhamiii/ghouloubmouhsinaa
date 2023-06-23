@@ -1,8 +1,11 @@
 // ignore_for_file: file_names
 
+import 'dart:ui';
+
 import 'package:flutter/material.dart'
     show
         BuildContext,
+        Colors,
         Column,
         Expanded,
         SafeArea,
@@ -23,23 +26,24 @@ class OnBoarding extends StatelessWidget {
     Get.put(OnBoardingControllerImp());
 
     return const Scaffold(
+        backgroundColor: Colors.white,
         body: SafeArea(
-      child: Column(
-        children: [
-          Expanded(
-            flex: 4,
-            child: CustomSliderOnBoarding(),
+          child: Column(
+            children: [
+              Expanded(
+                flex: 4,
+                child: CustomSliderOnBoarding(),
+              ),
+              Expanded(
+                  flex: 1,
+                  child: Column(
+                    children: [
+                      CustomDotControllerOnBoarding(),
+                      CustomButtonOnBoarding(),
+                    ],
+                  ))
+            ],
           ),
-          Expanded(
-              flex: 1,
-              child: Column(
-                children: [
-                  CustomDotControllerOnBoarding(),
-                  CustomButtonOnBoarding(),
-                ],
-              ))
-        ],
-      ),
-    ));
+        ));
   }
 }
