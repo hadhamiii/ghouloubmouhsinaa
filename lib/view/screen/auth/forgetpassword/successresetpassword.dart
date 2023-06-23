@@ -16,40 +16,42 @@ class SuccessResetPassword extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         centerTitle: true,
-        backgroundColor: AppColor.backgroundcolor,
+        backgroundColor: AppColor.kPrimaryColor,
         elevation: 0.0,
-        title: Text('',
+        title: Text('تبديل كلمة المرور',
             style: Theme.of(context)
                 .textTheme
                 .headline1!
-                .copyWith(color: AppColor.grey)),
+                .copyWith(color: AppColor.backgroundcolor)),
       ),
-      body: Container(
-        padding: const EdgeInsets.all(15),
-        child: Column(children: [
-          const Center(
-              child: Icon(
-            Icons.check_circle_outline,
-            size: 200,
-            color: AppColor.kPrimaryColor,
-          )),
-          Text("تمت العملية بنجاح",
-              style: Theme.of(context)
-                  .textTheme
-                  .headline1!
-                  .copyWith(fontSize: 30)),
-          const Text(""),
-          const Spacer(),
-          SizedBox(
-            width: double.infinity,
-            child: CustomButtomAuth(
-                text: "اذهب لتسجيل الدخول",
-                onPressed: () {
-                  controller.getToPageLogin();
-                }),
-          ),
-          const SizedBox(height: 30)
-        ]),
+      body: Form(
+        child: Container(
+          padding: const EdgeInsets.all(15),
+          child: Column(children: [
+            const Center(
+                child: Icon(
+              Icons.check_circle_outline,
+              size: 200,
+              color: AppColor.kPrimaryColor,
+            )),
+            Text("تمت العملية بنجاح",
+                style: Theme.of(context)
+                    .textTheme
+                    .headline1!
+                    .copyWith(fontSize: 30)),
+            const Text(""),
+            const Spacer(),
+            SizedBox(
+              width: double.infinity,
+              child: CustomButtomAuth(
+                  text: "اذهب لتسجيل الدخول",
+                  onPressed: () {
+                    controller.getToPageLogin();
+                  }),
+            ),
+            const SizedBox(height: 30)
+          ]),
+        ),
       ),
     );
   }

@@ -12,8 +12,7 @@ List<OnBoardingModel> onBoardingList = [
       title: "طرق دفع آمنة",
       image: ImageAsset.onBoardingImageDeux),
   OnBoardingModel(
-      body:
-          "تغطي كافة مجالات الخير و تصل الى من يستحقها من الفئات الأشد إحتياجاً",
+      body: "أجدأمسيات الجمعية متوفرة لديكم",
       title: "أمسيات الجمعية",
       image: ImageAsset.onBoardingImagetrois),
 ];

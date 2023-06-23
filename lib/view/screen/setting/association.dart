@@ -52,7 +52,7 @@ class Association extends StatelessWidget {
                     width: 500,
                     decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(20),
-                        color: Colors.grey[300]),
+                        color: const Color.fromARGB(255, 255, 255, 255)),
                     child: Column(
                       children: [
                         Row(
