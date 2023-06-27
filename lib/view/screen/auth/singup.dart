@@ -27,7 +27,7 @@ class SignUp extends StatelessWidget {
             style: Theme.of(context)
                 .textTheme
                 .headline1!
-                .copyWith(color: AppColor.kPrimaryLightColor)),
+                .copyWith(color: AppColor.backgroundcolor)),
       ),
       body: WillPopScope(
         onWillPop: alertExitApp,

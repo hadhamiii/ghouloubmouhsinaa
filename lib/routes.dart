@@ -16,6 +16,7 @@ import 'package:ghouloubmouhsina/view/screen/document/darhayat.dart';
 import 'package:ghouloubmouhsina/view/screen/document/items.dart';
 import 'package:ghouloubmouhsina/view/screen/document/lebeyk.dart';
 import 'package:ghouloubmouhsina/view/screen/document/moujemeaseken.dart';
+import 'package:ghouloubmouhsina/view/screen/donbutton.dart';
 import 'package:ghouloubmouhsina/view/screen/home/accueil_screen.dart';
 import 'package:ghouloubmouhsina/view/screen/home/handbutton.dart';
 import 'package:ghouloubmouhsina/view/screen/setting/association.dart';
@@ -50,4 +51,5 @@ List<GetPage<dynamic>>? routes = [
   GetPage(name: AppRoutes.association, page: () => const Association()),
   GetPage(name: AppRoutes.compte, page: () => const Compte()),
   GetPage(name: AppRoutes.localisation, page: () => const Localisation()),
+  GetPage(name: AppRoutes.donbutton, page: () => const DonButton()),
 ];

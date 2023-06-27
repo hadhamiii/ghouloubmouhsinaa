@@ -22,4 +22,6 @@ class AppRoutes {
   static const String association = "/association";
   static const String compte = "/compte";
   static const String localisation = "/localisation";
+
+  static const String donbutton = "/donbutton";
 }

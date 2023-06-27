@@ -43,36 +43,51 @@ class Profile extends StatelessWidget {
                   onTap: () {
                     controller.goToCompte();
                   },
-                  trailing: const Icon(Icons.edit_note_rounded),
+                  trailing: const Icon(
+                    Icons.edit_note_rounded,
+                    color: AppColor.kPrimaryColor,
+                  ),
                   title: const Text("معلوماتي الشخصية"),
                 ),
                 ListTile(
                   onTap: () {
                     controller.goToAssociation();
                   },
-                  trailing: const Icon(Icons.help_outline_rounded),
+                  trailing: const Icon(
+                    Icons.help_outline_rounded,
+                    color: AppColor.kPrimaryColor,
+                  ),
                   title: const Text("عن قلوب محسنة"),
                 ),
                 ListTile(
                   onTap: () {
                     controller.goTocontact();
                   },
-                  trailing: const Icon(Icons.phone_callback_outlined),
+                  trailing: const Icon(
+                    Icons.phone_callback_outlined,
+                    color: AppColor.kPrimaryColor,
+                  ),
                   title: const Text("تواصل معنا"),
                 ),
                 ListTile(
                   onTap: () {
                     controller.goToLocalisation();
                   },
-                  trailing: const Icon(Icons.location_on_outlined),
-                  title: const Text("إمكانية الوصول"),
+                  trailing: const Icon(
+                    Icons.close,
+                    color: AppColor.kPrimaryColor,
+                  ),
+                  title: const Text("حذف حسابي"),
                 ),
                 ListTile(
                   onTap: () {
                     controller.logout();
                   },
                   title: const Text("تسجيل الخروج"),
-                  trailing: const Icon(Icons.exit_to_app),
+                  trailing: const Icon(
+                    Icons.exit_to_app,
+                    color: AppColor.kPrimaryColor,
+                  ),
                 ),
               ]),
             ),

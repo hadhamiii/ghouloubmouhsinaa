@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:ghouloubmouhsina/controller/home/itemscontroller.dart';
+import 'package:ghouloubmouhsina/core/constant/color.dart';
 import 'package:ghouloubmouhsina/view/widget/home/customappbar.dart';
 import 'package:ghouloubmouhsina/view/widget/itmes/customlistitems.dart';
 
@@ -12,14 +13,18 @@ class Items extends StatelessWidget {
     Get.put(ItemsControllerImp());
 
     return Scaffold(
-        body: Container(
-      padding: const EdgeInsets.all(15),
-      child: ListView(children: [
-        CustomAppBar(
-            titleappbar: "", onPressedIcon: () {}, onPressedSearch: () {}),
-        const SizedBox(height: 20),
-        const CustomListItems()
-      ]),
-    ));
+      body: CustomScrollView(
+        slivers: [
+          SliverAppBar.large(
+            backgroundColor: AppColor.kPrimaryColor,
+            title: CustomAppBar(
+                titleappbar: "", onPressedIcon: () {}, onPressedSearch: () {}),
+          ),
+          const SliverToBoxAdapter(
+            child: CustomListItems(),
+          )
+        ],
+      ),
+    );
   }
 }

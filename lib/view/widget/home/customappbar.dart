@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:ghouloubmouhsina/core/constant/color.dart';
 
 class CustomAppBar extends StatelessWidget {
   final String titleappbar;
@@ -17,20 +16,6 @@ class CustomAppBar extends StatelessWidget {
     return Container(
       margin: const EdgeInsets.only(top: 10),
       child: Row(children: [
-        Container(
-          decoration: BoxDecoration(
-              color: Colors.grey[200], borderRadius: BorderRadius.circular(10)),
-          width: 60,
-          padding: const EdgeInsets.symmetric(vertical: 8),
-          child: IconButton(
-              onPressed: onPressedIcon,
-              icon: const Icon(
-                Icons.favorite,
-                size: 30,
-                color: AppColor.kPrimaryColor,
-              )),
-        ),
-        const SizedBox(width: 10),
         Expanded(
             child: TextFormField(
           decoration: InputDecoration(

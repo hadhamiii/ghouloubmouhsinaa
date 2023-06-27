@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:ghouloubmouhsina/controller/document/campagnecontroller.dart';
 import 'package:ghouloubmouhsina/core/constant/color.dart';
 import 'package:ghouloubmouhsina/core/constant/imageasset.dart';
 
@@ -7,6 +9,7 @@ class Campagne extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    CampagneControllerImp controller = Get.put(CampagneControllerImp());
     return Scaffold(
       backgroundColor: const Color.fromARGB(255, 255, 255, 255),
       body: Container(
@@ -41,7 +44,9 @@ class Campagne extends StatelessWidget {
                 borderRadius: BorderRadius.circular(100),
               ),
               child: InkWell(
-                onTap: () {},
+                onTap: () {
+                  controller.goToDon();
+                },
                 child: const Text(
                   "تبرع من هنا ",
                   textAlign: TextAlign.center,

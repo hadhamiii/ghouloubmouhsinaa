@@ -20,60 +20,58 @@ class Accueil extends StatelessWidget {
     HomeScreenControllerImp controller2 = Get.put(HomeScreenControllerImp());
 
     return Scaffold(
-        drawer: const Drawer(),
         body: GetBuilder<AccueilControllerImp>(
-          builder: (controller) => Container(
-              padding: const EdgeInsets.symmetric(horizontal: 15),
-              child: ListView(
+      builder: (controller) => Container(
+          padding: const EdgeInsets.symmetric(horizontal: 15),
+          child: ListView(
+            children: [
+              const CustomAppBarHome(),
+              const newcard(),
+              const SizedBox(
+                height: 10,
+              ),
+              const Qauran(),
+              Row(
                 children: [
-                  const CustomAppBarHome(),
-                  const newcard(),
-                  const SizedBox(
-                    height: 10,
-                  ),
-                  const Qauran(),
-                  Row(
-                    children: [
-                      InkWell(
-                        onTap: () {
-                          controller2.changePage(1);
-                        },
-                        child: const Text(
-                          "<< المزيد",
-                          style: TextStyle(
-                              fontFamily: "Cairo",
-                              color: AppColor.kPrimaryColor),
-                        ),
-                      ),
-                      const Spacer(),
-                      const Text(
-                        "الملفات",
-                        style: TextStyle(
-                          color: AppColor.black,
-                          fontSize: 20,
-                          fontWeight: FontWeight.bold,
-                        ),
-                      ),
-                    ],
-                  ),
-                  const ListItemsAccuiel(),
-                  const SizedBox(height: 20),
-                  const Text("الصدقات الجارية",
-                      textAlign: TextAlign.end,
+                  InkWell(
+                    onTap: () {
+                      controller2.changePage(1);
+                    },
+                    child: const Text(
+                      "<< المزيد",
                       style: TextStyle(
-                        color: AppColor.black,
-                        fontSize: 20,
-                        fontWeight: FontWeight.bold,
-                      )),
-                  const ListCategoriesAccueil(),
-                  const SizedBox(
-                    height: 20,
+                          fontFamily: "Cairo", color: AppColor.kPrimaryColor),
+                    ),
                   ),
-                  const PostCard(),
-                  const Hadith(),
-                  const SizedBox(height: 20),
+                  const Spacer(),
+                  const Text(
+                    "الملفات",
+                    style: TextStyle(
+                      color: AppColor.black,
+                      fontSize: 20,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
                 ],
-              )),
-        ));
+              ),
+              const ListItemsAccuiel(),
+              const SizedBox(height: 20),
+              const Text("الصدقات الجارية",
+                  textAlign: TextAlign.end,
+                  style: TextStyle(
+                    color: AppColor.black,
+                    fontSize: 20,
+                    fontWeight: FontWeight.bold,
+                  )),
+              const ListCategoriesAccueil(),
+              const SizedBox(
+                height: 20,
+              ),
+              const PostCard(),
+              const Hadith(),
+              const SizedBox(height: 20),
+            ],
+          )),
+    ));
   }
 }

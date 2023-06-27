@@ -17,8 +17,7 @@ class SuccessSignUp extends StatelessWidget {
       appBar: AppBar(
         centerTitle: true,
         backgroundColor: AppColor.kPrimaryColor,
-        elevation: 0.0,
-        title: Text("تمت العملية بنجاح",
+        title: Text("تسجيل",
             style: Theme.of(context)
                 .textTheme
                 .headline1!

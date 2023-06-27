@@ -82,7 +82,7 @@ class Association extends StatelessWidget {
                         )
                       ],
                     )),
-                SizedBox(
+                const SizedBox(
                   height: 50,
                 )
               ],
