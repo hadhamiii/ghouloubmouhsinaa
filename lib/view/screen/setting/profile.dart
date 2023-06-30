@@ -13,6 +13,7 @@ class Profile extends StatelessWidget {
   Widget build(BuildContext context) {
     ProfileController controller = Get.put(ProfileController());
     return Container(
+      color: Colors.white,
       child: ListView(
         children: [
           Stack(

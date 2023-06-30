@@ -13,6 +13,7 @@ class Items extends StatelessWidget {
     Get.put(ItemsControllerImp());
 
     return Scaffold(
+      backgroundColor: Colors.white,
       body: CustomScrollView(
         slivers: [
           SliverAppBar.large(

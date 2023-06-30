@@ -14,7 +14,7 @@ abstract class LoginController extends GetxController {
 class LoginControllerImp extends LoginController {
   GlobalKey<FormState> formstate = GlobalKey<FormState>();
 
-  late TextEditingController email;
+  late TextEditingController phone;
   late TextEditingController password;
   bool isShowpassword = true;
   shoxPassword() {
@@ -40,14 +40,14 @@ class LoginControllerImp extends LoginController {
 
   @override
   void onInit() {
-    email = TextEditingController();
+    phone = TextEditingController();
     password = TextEditingController();
     super.onInit();
   }
 
   @override
   void dispose() {
-    email.dispose();
+    phone.dispose();
     password.dispose();
     super.dispose();
   }

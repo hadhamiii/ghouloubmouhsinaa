@@ -11,7 +11,7 @@ class Campagne extends StatelessWidget {
   Widget build(BuildContext context) {
     CampagneControllerImp controller = Get.put(CampagneControllerImp());
     return Scaffold(
-      backgroundColor: const Color.fromARGB(255, 255, 255, 255),
+      backgroundColor: Colors.white,
       body: Container(
         margin: const EdgeInsets.only(top: 40, left: 20, right: 20, bottom: 20),
         child: ListView(

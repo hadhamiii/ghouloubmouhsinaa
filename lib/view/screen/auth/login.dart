@@ -38,22 +38,22 @@ class Login extends StatelessWidget {
               child: ListView(
                 children: [
                   const LogoAuth(),
-                  const SizedBox(height: 20),
-                  const CustomTextTitleAuth(text: "مرحبا بكم"),
                   const SizedBox(height: 10),
+                  const CustomTextTitleAuth(text: "مرحبا بكم"),
+                  const SizedBox(height: 5),
                   const CustomTextBodyAuth(
                       text:
                           "قم بتسجيل الدخول باستخدام بريدك الإلكتروني وكلمة المرور أو استمر في التواصل الاجتماعي"),
                   const SizedBox(height: 15),
                   CustomTextFormAuth(
-                    isNumber: false,
+                    isNumber: true,
                     valid: (val) {
-                      return validInput(val!, 5, 100, "email");
+                      return validInput(val!, 8, 8, "phone");
                     },
-                    mycontroller: controller.email,
-                    hinttext: "أدخل بريدك الإلكتروني",
-                    iconData: Icons.email_outlined,
-                    labeltext: "بريد إلكتروني",
+                    mycontroller: controller.phone,
+                    hinttext: "أدخل هاتفك",
+                    iconData: Icons.phone_android_outlined,
+                    labeltext: "الهاتف",
                     // mycontroller: ,
                   ),
                   GetBuilder<LoginControllerImp>(
